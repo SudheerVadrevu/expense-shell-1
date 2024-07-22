@@ -58,7 +58,7 @@ npm install &>>$LOGFILE
 VALIDATE $? "Installing nodejs dependencies"
 
 #check your repo and path
-cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.service &>>$LOGFILE #In expense document manam 'vim' ni use chesi
+cp /home/ec2-user/expense-shell-1/backend.service /etc/systemd/system/backend.service &>>$LOGFILE #In expense document manam 'vim' ni use chesi
 VALIDATE $? "Copied backend service"                             #chesam description ni but vim script lo work avadhu so manam ikkada
                                                 # 'backend.service ani' file create chesi andulo description ni copy chesi aaa file path ikkada icham
 systemctl daemon-reload &>>$LOGFILE             # if you type pwd in server it shows /home/ec2-user then /expense-shell/backend.service
