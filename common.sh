@@ -1,12 +1,12 @@
 #!/bin/bash
 
-set -e
+#set -e
 
-seetheerror(){
-    echo "Error happened at the line no $1: error at command $2"
-}
+#seetheerror(){
+   # echo "Error happened at the line no $1: error at command $2"
+#}
 
-trap 'seetheerror ${LINENO} "$BASH_COMMAND"' ERR
+#trap 'seetheerror ${LINENO} "$BASH_COMMAND"' ERR
 
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
