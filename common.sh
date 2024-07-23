@@ -1,5 +1,13 @@
 #!/bin/bash
 
+set -e
+
+seetheerror(){
+    echo "Error happened at the line no $1: error at command $2"
+}
+
+trap 'seetheerror ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
